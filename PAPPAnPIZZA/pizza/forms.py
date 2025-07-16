@@ -24,3 +24,6 @@ class PizzaForm(forms.ModelForm):
             'size': forms.Select(attrs={'class': 'form-control'})
         }
         
+
+class MultiplePizzaForm(forms.Form):
+    number= forms.IntegerField(label="Number of Pizzas", min_value=1, max_value=6)
