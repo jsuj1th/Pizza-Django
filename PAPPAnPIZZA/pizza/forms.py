@@ -18,4 +18,9 @@ class PizzaForm(forms.ModelForm):
             'topping2': 'Topping 2',
             'size': 'Size'
         }
+        widgets = {
+            'topping1': forms.TextInput(attrs={'placeholder': 'Enter first topping'}),
+            'topping2': forms.TextInput(attrs={'placeholder': 'Enter second topping'}),
+            'size': forms.Select(attrs={'class': 'form-control'})
+        }
         
